@@ -1,0 +1,174 @@
+.ai-generator-wrapper,
+.ai-prompt-generator-container {
+	padding: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.ai-prompt-generator-container {
+	display: flex;
+	gap: 30px;
+}
+
+.ai-prompt-form,
+.ai-content-results,
+.ai-prompt-generator-content {
+	background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+	padding: 25px;
+	margin-top: 20px;
+	flex: 1;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ai-prompt-form:hover,
+.ai-content-results:hover,
+.ai-prompt-generator-content:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #1d2327;
+	transition: color 0.2s ease;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	background-color: #fff;
+	transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
+	background-color: #f8f9fa;
+}
+
+.range-container {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.range-container input[type="range"] {
+	flex: 1;
+	height: 6px;
+	background: linear-gradient(90deg, #2271b1 0%, #72aee6 100%);
+	border-radius: 3px;
+	appearance: none;
+}
+
+.range-container input[type="range"]::-webkit-slider-thumb {
+	appearance: none;
+	width: 18px;
+	height: 18px;
+	background: #ffffff;
+	border: 2px solid #2271b1;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.range-container input[type="range"]::-webkit-slider-thumb:hover {
+	transform: scale(1.1);
+}
+
+.temperature-value {
+	min-width: 40px;
+	text-align: center;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+#generate_content_btn,
+.content-actions .button {
+	padding: 8px 16px;
+	background: linear-gradient(135deg, #2271b1 0%, #135e96 100%);
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+#generate_content_btn:hover,
+.content-actions .button:hover {
+	background: linear-gradient(135deg, #135e96 0%, #0c4875 100%);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 8px rgba(19, 94, 150, 0.2);
+}
+
+.content-actions {
+	margin-top: 20px;
+	display: flex;
+	gap: 10px;
+}
+
+#content_spinner {
+	text-align: center;
+	padding: 20px;
+}
+
+.custom-prompt-container textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+
+/* WordPress Editor Customization */
+.wp-editor-container {
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	overflow: hidden;
+	background: #ffffff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.wp-editor-tools {
+	background: linear-gradient(180deg, #f6f7f7 0%, #f0f0f1 100%);
+	padding: 10px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+	.ai-prompt-generator-container {
+		flex-direction: column;
+	}
+
+	.ai-prompt-form,
+	.ai-content-results {
+		width: 100%;
+	}
+
+	#generate_content_btn,
+	.content-actions .button {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.content-actions {
+		flex-direction: column;
+	}
+}
